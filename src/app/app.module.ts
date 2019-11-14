@@ -1,16 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
+import { VideosComponent } from "./videos/videos.component";
+import { VideoDetailComponent } from "./video-detail/video-detail.component";
+import { MessageService } from "./message.service";
+import { YoutubeService } from "./youtube.service";
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
+  declarations: [AppComponent, VideosComponent, VideoDetailComponent, MessagesComponent],
+  imports: [BrowserModule, FormsModule],
+  providers: [MessageService, YoutubeService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
