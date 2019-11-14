@@ -11,7 +11,8 @@ export class YoutubeService {
   constructor(private messageService: MessageService) {}
 
   getVideos(): Observable<Video[]> {
-    //this.messageService.add("YoutubeService: fetched videos");
+    // TODO: send the message _after_ fetching the heroes
+    this.messageService.add("HeroService: fetched heroes");
     return of(VIDEOS);
   }
 }
