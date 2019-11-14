@@ -8,10 +8,12 @@ import { VideoDetailComponent } from "./video-detail/video-detail.component";
 import { MessageService } from "./message.service";
 import { YoutubeService } from "./youtube.service";
 import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, VideosComponent, VideoDetailComponent, MessagesComponent],
-  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent, VideosComponent, VideoDetailComponent, MessagesComponent, DashboardComponent],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [MessageService, YoutubeService],
   bootstrap: [AppComponent]
 })

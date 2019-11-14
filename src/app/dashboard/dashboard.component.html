@@ -1,0 +1,17 @@
+<h3>Top videoes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let video of videos" class="col-1-4">
+    <div class="module video">
+      <h4>{{ video.name }}</h4>
+    </div>
+  </a>
+</div>
+<a
+  *ngFor="let video of videos"
+  class="col-1-4"
+  routerLink="/detail/{{ video.id }}"
+>
+  <div class="module video">
+    <h4>{{ video.name }}</h4>
+  </div>
+</a>
